@@ -7,6 +7,12 @@ import MovieAddForm from "../movie-add-form/movie-add-form"
 import "./app.css"
 
 const App = () => {
+    const data = [
+        {name: 'Terminator 1', viewers: 123, favourite: false},
+        {name: 'Terminator 2', viewers: 123, favourite: true},
+        {name: 'Terminator 3', viewers: 123, favourite: false}
+    ]
+
     return <div className="app font-monospace">
         <div className="content">
             <AppInfo />
@@ -14,7 +20,7 @@ const App = () => {
                 <SearchPanel />
                 <AppFilter />
             </div>
-            <MovieList />
+            <MovieList data={data} />
             <MovieAddForm />
         </div>
     </div>
